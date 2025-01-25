@@ -1,0 +1,49 @@
+/*
+  ___________________________________________________
+  ()          Background Gradient Animation          )
+  +==================================================+	
+  |  Copyright 2025 ag-sanjjeev                      |
+  |                                                  |
+  |  The source code is licensed under  MIT-style    |
+  |  License. The usage, permission and condition    |
+  |  are  applicable  to  this source code as per    |
+  |  license.  That can be found in  LICENSE file    |
+  |  or at https://opensource.org/licenses/MIT.      |
+  (__________________________________________________(
+*/
+
+@use 'reset';
+@use 'variables' as *;
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(62deg, $orange, $pink, $blue, $green);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; 
+}
+
+// Keyframes Animation
+@-webkit-keyframes gradient{
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+     background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient{
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+     background-position: 0% 50%;
+  }
+}
