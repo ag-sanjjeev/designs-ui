@@ -1,0 +1,79 @@
+<!--
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<!-- Custom Style -->
+	<link rel="stylesheet" type="text/css" href="./main.css" media="all">
+	<title>Product Card</title>
+</head>
+<body>
+
+	<!-- Product Card -->
+	<div class="card">
+		<div class="card-body">
+			<div class="product-description">
+				<h4 class="brand">SPhone</h4>
+				<h2 class="name">Smart N+ 2024</h2>
+				<p class="info">AI Phone Of This Era</p>
+			</div>
+			<div class="varients-image">
+				<div class="item">
+					<input type="radio" name="color" id="green-varient" checked>
+					<img src="./images/mobile-2.png" id="green-varient-image">
+				</div>
+				<div class="item">
+					<input type="radio" name="color" id="purple-varient">
+					<img src="./images/mobile-1.png" id="purple-varient-image">
+				</div>
+			</div>
+			<div class="varients">
+				<label for="green-varient" class="color">
+					<span>Green</span>
+					<div class="color-palatte green"></div>
+				</label>
+				<label for="purple-varient" class="color">
+					<span>Purple</span>
+					<div class="color-palatte purple"></div>
+				</label>
+			</div>
+		</div>
+		<div class="buy-section">
+			<a href="#" class="button">Buy</a>
+		</div>
+		<div class="more">
+			<ul class="review">
+				<li>
+					<i class="bi bi-star-fill"></i>
+				</li>
+				<li>
+					<i class="bi bi-star-fill"></i>
+				</li>
+				<li>
+					<i class="bi bi-star-fill"></i>
+				</li>
+				<li>
+					<i class="bi bi-star-half"></i>
+				</li>
+				<li>
+					<i class="bi bi-star"></i>
+				</li>
+			</ul>
+			<span class="price">$99.99</span>
+		</div>
+	</div>
+
+</body>
+</html>
