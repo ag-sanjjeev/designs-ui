@@ -1,0 +1,51 @@
+/*
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+*/
+
+/* Gradient Text Effect */
+:root {
+	--background: #1F1F1F;
+	--color1: #1FA0FF;
+	--color2: #96E6A1;
+	--color3: #FF4F8B;
+	--color4: #A8DBFA;
+	--color5: #E3B1F6;
+	--color6: #635EE2;
+};
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 100vw;
+	max-height: 100vh;
+	background: var(--background);
+}
+
+.gradient-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3em;
+	text-transform: uppercase;
+	font-family: 'Verdana', sans-serif;
+	padding: 10px;	
+	background-image: linear-gradient(to top left, var(--color1), var(--color2), var(--color3), var(--color4));			
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	color: transparent;	
+}
