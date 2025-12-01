@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+
+body {
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, #e739f5), color-stop(100%, #5bc7db));
+  background-image: -moz-linear-gradient(bottom, #e739f5 0%, #5bc7db 100%);
+  width: 100%;
+  height: 100vh; }
+
+.container {
+  width: 350px;
+  height: 500px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px; }
+  .container .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 30px 0px 30px; }
+    .container .form-group h2.form-title {
+      text-align: center;
+      text-transform: uppercase;
+      margin: 25px 0px; }
+    .container .form-group label {
+      font-size: 12px;
+      cursor: pointer; }
+    .container .form-group .icon-input {
+      padding: 10px 5px;
+      border-bottom: 1px solid #c3c3c3; }
+      .container .form-group .icon-input input {
+        border: none;
+        outline: none;
+        width: 80%; }
+    .container .form-group a.forgot-password-link {
+      text-align: end;
+      margin-top: 10px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #e739f5; }
+    .container .form-group button.login-button {
+      width: 100%;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, #e739f5), color-stop(100%, #5bc7db));
+      background-image: -moz-linear-gradient(bottom, #e739f5 0%, #5bc7db 100%);
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out; }
+      .container .form-group button.login-button:active {
+        transform: scale(0.9); }
+    .container .form-group p.info-1 {
+      text-align: center;
+      font-size: 12px; }
+    .container .form-group p.info-2 {
+      text-align: center;
+      font-size: 12px; }
+    .container .form-group a.company-link {
+      align-self: center;
+      text-align: center;
+      font-size: 14px;
+      text-decoration: none;
+      color: #e739f5; }
+    .container .form-group .social-button-group {
+      margin: 10px 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .container .form-group .social-button-group .social-button {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        padding: 0px 2px 0px 2px;
+        border: none;
+        border-radius: 20px;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out; }
+        .container .form-group .social-button-group .social-button.facebook-bg {
+          background-color: #3f5791; }
+        .container .form-group .social-button-group .social-button.twitter-bg {
+          background-color: #499fe9; }
+        .container .form-group .social-button-group .social-button.google-bg {
+          background-color: #d94f3d; }
+        .container .form-group .social-button-group .social-button i.bi {
+          text-align: center;
+          font-size: 18px;
+          color: #fff;
+          margin-left: 4px; }
+        .container .form-group .social-button-group .social-button span.button-text {
+          margin-left: 10px;
+          margin-right: 5px;
+          flex-grow: 0;
+          color: #fff;
+          font-size: 15px; }
+        .container .form-group .social-button-group .social-button:hover {
+          width: 50%; }
+        .container .form-group .social-button-group .social-button:active {
+          transform: scale(0.9); }
+
+@media (max-width: 576px) {
+  body {
+    width: auto;
+    height: auto;
+    padding: 10px; }
+
+  .container {
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    padding: 10px 5px; }
+    .container .form-group {
+      padding: 7px 20px 0px 20px; }
+      .container .form-group h2.form-title {
+        margin: 20px 0px; }
+      .container .form-group .social-button-group {
+        margin: 7px 3px;
+        display: flex;
+        flex-direction: column; }
+        .container .form-group .social-button-group .social-button {
+          width: 50%;
+          transition: all 0.5s ease-in-out;
+          justify-self: baseline; }
+          .container .form-group .social-button-group .social-button:active, .container .form-group .social-button-group .social-button:hover {
+            transform: scale(0.9); } }
+
+/*# sourceMappingURL=style.css.map */
