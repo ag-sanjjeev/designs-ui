@@ -1,0 +1,17 @@
+:root{
+	--background: #0a0410;
+	--white: #f1ecf2;
+	--light-gray-1: #e6e3e9;
+	--light-gray-2: #3d383f;
+	--purple: #4c1cb2;
+	--green: #20af61;
+	--black: #292929;
+
+	--appBackground: #272229;
+	--inputBox: #3a353c;
+
+	--primary: #4c1cb2;
+	--text-title: #f1ecf2;
+	--text: #b0b0b0;
+	--text-muted: #CFD8DC;
+}
