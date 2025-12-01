@@ -1,0 +1,14 @@
+$white: #fff;
+$black: #000;
+$light-gray: #c3c3c3;
+$purple: #e739f5;
+$green-blue: #5bc7db;
+$facebook-bg: #3f5791;
+$twitter-bg: #499fe9;
+$google-bg: #d94f3d;
+
+$webkit-gradient: -webkit-gradient(linear, right top, left bottom, color-stop(0%, $purple), color-stop(100%, $green-blue));
+
+$moz-gradient: -moz-linear-gradient(bottom, $purple 0%, $green-blue 100%);
+
+$font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

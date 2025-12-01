@@ -1,0 +1,84 @@
+<!--
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./thirdparty/bootstrap_icons/bootstrap-icons.css" media="all" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.1/font/bootstrap-icons.min.css" integrity="sha512-WYaDo1TDjuW+MPatvDarHSfuhFAflHxD87U9RoB4/CSFh24/jzUHfirvuvwGmJq0U7S9ohBXy4Tfmk2UKkp2gA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  
+  <link rel="stylesheet" href="./dist/style.css" media="all" />
+
+  <title>Login Account</title>
+</head>
+<body>
+  
+  <form class="container" action="./index.html" method="post" onsubmit="return false;">
+
+    <div class="form-group">
+      <h2 class="form-title">Login</h2>
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <div class="icon-input">
+        <i class="bi bi-person"></i>
+        <input type="text" name="username" id="username" class="username" placeholder="Type your username" required="true" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <div class="icon-input">
+        <i class="bi bi-shield-lock"></i>
+        <input type="password" name="password" id="password" class="password" placeholder="Type your password" required="true" />
+      </div>
+      <a href="#" class="forgot-password-link">Forgot password?</a>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="login-button" >Login</button>
+    </div>
+
+    <div class="form-group">
+
+      <p class="info-1">Or <br /> Login By </p>
+
+      <div class="social-button-group">
+        <button class="social-button facebook-bg">
+          <i class="bi bi-facebook"></i>
+          <span class="button-text">Facebook</span>
+        </button>
+        <button class="social-button twitter-bg">
+          <i class="bi bi-twitter"></i>
+          <span class="button-text">Twitter</span>
+        </button>
+        <button class="social-button google-bg">
+          <i class="bi bi-google"></i>
+          <span class="button-text">Google</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <p class="info-2">Copywrite &copy; 2021</p>
+      <a href="#" class="company-link">ABC private limited</a>
+    </div>
+
+  </form>
+
+</body>
+</html>
