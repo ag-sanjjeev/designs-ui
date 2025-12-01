@@ -1,0 +1,124 @@
+/*
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+*/
+
+/* Glass Morphism Effect */
+
+:root {
+	--background: black;
+	--color1: #F8E356;
+	--color2: #D3F5CF;
+	--color3: #FF4F8B;
+	--color4: #A8DBFA;
+	--color5: #E3B1F6;
+	--color6: #635EE2;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Consolas', monospace;
+}
+
+body {
+	background: linear-gradient(to right, var(--color4), var(--color6));
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+div.circle {
+	position: absolute;
+	border-radius: 100%;	
+}
+
+div.circle:first-child {
+	top: clamp(250px, 50vh, 60%);
+	right: clamp(65vw, 32em, 60%);
+	width: min(70px, 5em);
+	height: min(70px, 5em);
+	background-color: var(--color1);
+}
+
+div.circle:nth-child(2) {
+	top: clamp(250px, 60vh, 40%);
+	left: clamp(50px, 62vw, 70%);
+	width: clamp(100px, 5em, 150px);
+	height: clamp(100px, 5em, 150px);
+	background-color: var(--color5);
+}
+
+.glass-panel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: clamp(200px, 30em, 50%);
+	height: clamp(180px, 30em, 40%);
+	background: transparent;
+	border: 1px solid var(--color4);
+	border-radius: 12px;
+	backdrop-filter: blur(5px);	
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.1),
+	-2px -2px 12px rgba(255,255,255,0.1);
+
+	transition: transform 1s ease, box-shadow 1s ease, backdrop-filter 0.5s ease;
+}
+
+.glass-panel:hover {
+	transform: translate(-50%, -50%) scale(1.1);
+	backdrop-filter: blur(10px);
+	box-shadow: 12px 12px 12px rgba(0,0,0,0.1),
+	-12px -12px 12px rgba(255,255,255,0.1);
+}
+
+.glass-panel .header {		
+	display: grid;
+	gap: 1em;
+	grid-template-columns: 4fr 1fr;
+	padding: 5px 15px;
+	background: white;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.glass-panel .header .title {
+	color: var(--color3);
+	pointer-events: none;
+	user-select: none;
+}
+
+.glass-panel .header ul {
+	list-style: none;
+	display: flex;
+	gap: 1em;
+	align-items: center;
+}
+
+.glass-panel .header ul a {
+	font-size: 1em;
+	padding: 2px 3px;
+	text-decoration: none;
+	color: var(--color6);
+	font-weight: bolder;
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.5s ease;
+}
+
+.glass-panel .header ul a:hover {
+	font-size: 0.9em;
+	box-shadow: 2px -2px 2px rgba(0,0,0,0.1),
+	2px -2px 2px rgba(255,255,255,0.1);
+}
