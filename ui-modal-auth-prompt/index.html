@@ -1,0 +1,90 @@
+<!--
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="http://localhost/bootstrap/bootstrap.css" media="all">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="all" >
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" type="text/css" href="../../../../thirdparty/fontawesome/css/all.css" media="all">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" media="all" >	
+
+	<!-- Animate CSS -->
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/animate.css" media="all">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+
+	<title>Login Sign up Prompt</title>
+</head>
+<body>
+
+<!-- Interaction Buttons -->
+<a href="#" class="btn btn-outline-danger position-absolute top-50 start-50 translate-middle like-button">
+	<span class="fa fa-heart"></span>
+	Like
+</a>
+
+<!-- Modal Dialog Definition -->
+<div class="modal fade" tabindex="-1" id="auth-prompt-dialog" aria-labelledby="Login Sign up Prompt" aria-hidden="true">
+	<!-- Centered Dialog -->
+	<div class="modal-dialog modal-sm modal-dialog-centered">
+		
+		<!-- Modal Content -->
+		<div class="modal-content">
+			
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h5 class="modal-title">Attention!</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+
+			<!-- Modal Body -->
+			<div class="modal-body">
+				
+				<!-- Modal Grid -->
+				<div class="row flex-column gap-3">
+					<div class="col">
+						<p class="">Hey! guest please</p>
+					</div>
+					<div class="col d-flex justify-content-center align-items-center">
+						<a href="#" class="btn btn btn-success w-100" aria-label="Login">Login</a>
+						<span class="rounded-circle mx-2 p-2 bg-primary text-light">OR</span>
+						<a href="#" class="btn btn btn-danger w-100" aria-label="Create account">Create</a>
+					</div>
+					<div class="col">
+						<p class="">Your account by accepting our <a href="#" class="btn-link">Terms.</a></p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Bootstrap Script -->
+<script type="text/javascript" src="http://localhost/bootstrap/bootstrap.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js" integrity="sha512-72WD92hLs7T5FAXn3vkNZflWG6pglUDDpm87TeQmfSg8KnrymL2G30R7as4FmTwhgu9H7eSzDCX3mjitSecKnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="http://localhost/js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
