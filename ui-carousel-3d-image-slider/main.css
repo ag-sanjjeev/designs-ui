@@ -1,0 +1,68 @@
+/*
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+*/
+
+/* 3D Image Slider */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.slider {
+	width: 200px;
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	animation: spin 30s linear infinite; 
+	/*background: red;*/
+}
+
+.slider .item {
+	position: absolute;
+	inset: 0 0 0 0;
+	/* Sspacing between each sliders decided by Y axis */
+	/* deg = (position - 1) * (360deg / totalquantity) */
+	/* To specify the CSS units in the calculation that final result again multiplied by 1deg */
+	transform: 
+		rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg) )
+		translateZ(500px);
+	user-select: none;
+}
+
+.slider .item img {
+	width: 100px;
+	height: auto;
+	object-fit: cover;
+	pointer-events: none;
+}
+
+@keyframes spin {
+	from {
+		transform: perspective(2000px) rotateX(-10deg) rotateY(0deg);
+	}
+	to {
+		transform: perspective(2000px) rotateX(-10deg) rotateY(360deg);
+	}
+}
