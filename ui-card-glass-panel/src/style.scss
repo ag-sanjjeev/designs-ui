@@ -1,0 +1,107 @@
+/* Style */
+
+@import '_reset';
+@import '_variables';
+
+main {
+	min-height: 100vh;
+	background: linear-gradient(to right top, $lightBlue2, $lightBlue1);
+
+	.glass-panel {
+
+		background: linear-gradient(to right bottom, $transperantWhite1, $transperantWhite2);
+		border-radius: $borderRadius1;
+		box-shadow: $boxShadow1;
+		backdrop-filter: blur(0.5rem);
+
+		min-width: 60%;
+		min-height: 80%;
+
+		max-width: 90%;
+		max-height: 90%;
+
+		width: 60%;
+		height: 70%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+
+		z-index: 5;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.element-circle-1,
+.element-circle-2,
+.element-circle-3 {
+	background: white;
+	background: linear-gradient(to right top, $transperantWhite1, $transperantWhite2);
+	position: absolute;	
+}
+
+.element-circle-1 {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	top: 5%;
+	right: 15%;	
+	z-index: 1;
+}
+
+.element-circle-2 {
+	width: 7rem;
+	height: 7rem;
+	border-radius: 50%;
+	bottom: 20%;
+	left: 15%;
+	z-index: 2;
+}
+
+.element-circle-3 {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	bottom: 25%;
+	right: 30%;
+	z-index: 3;
+}
+
+/* Container */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	background: $white;
+	padding: 2rem 1rem;
+	margin: 2rem 1rem;
+	border-radius: $borderRadius1;
+
+	transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+
+	.heading {
+		font-weight: 600;
+		font-size: 1.7rem;		
+	}
+
+	.content {
+		font-weight: 200;
+		font-size: 1rem;
+
+		margin-top: 1rem;
+	}
+
+	&:hover {
+		box-shadow: $boxShadow1;
+		transform: scale(1.02);
+	};
+}
