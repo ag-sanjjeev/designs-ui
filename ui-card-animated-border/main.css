@@ -1,0 +1,166 @@
+/*
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+*/
+
+/* Animated Border Effect */
+
+:root {
+	--background: #1F1F1F;
+	--lightblack: #5A5A5A;
+	--white: #F2F2F2;
+	--white2: #FDFDFD;
+	--gray: #C3C3C3;
+	--color1: #F8E356;
+	--color2: #D3F5CF;
+	--color3: #FF4F8B;
+	--color4: #A8DBFA;
+	--color5: #E3B1F6;
+	--color6: #635EE2;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	min-height: auto;
+	background: var(--lightblack);
+}
+
+.card-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 100%;
+	height: 100vh;	
+	padding: 10px 12px;
+	background: transparent;	
+}
+
+.card {
+	width: 20em;
+	aspect-ratio: 1/1;
+	background: var(--background);
+	color: var(--white);
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 12px 12px 12px rgba(0,0,0,0.2);
+	display: grid;
+	grid-template-rows: 3em 15em 1fr;
+	margin-bottom: 5em;
+}
+
+.card .title {
+	background: var(--white);
+	text-align: center;
+	font-size: 2em;
+	color: var(--color3);
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	user-select: none;
+}
+
+.card .content {
+	line-height: 1.5;
+	text-align: justify;
+	font-size: 1.1em;
+	padding: 30px;
+}
+
+.card a {	
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: var(--color3);
+	color: var(--white);
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: letter-spacing 0.5s ease;
+}
+
+.card a:hover {
+	letter-spacing: 1em;
+}	
+
+.card::after, .card::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -1;
+	width: 20em;
+	aspect-ratio: 1;
+	padding: 3px;
+	border-radius: 10px;
+	animation: spin 3s linear infinite;
+}
+
+.card::before {
+	filter: blur(1.5em);
+	opacity: 0.5;
+}
+
+/* property for overwriting angle by animation keyframes */
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+/* Card One */
+.card:nth-child(1)::after, .card:nth-child(1)::before {
+	background: conic-gradient(from var(--angle), transparent 90%, var(--white));
+}
+
+/* Card Two */
+.card:nth-child(2)::after, .card:nth-child(2)::before {
+	background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color1));
+}
+
+/* Card Three */
+.card:nth-child(3)::after, .card:nth-child(3)::before {
+	background: conic-gradient(from var(--angle), var(--color6), var(--color3), var(--color4), var(--color6));	
+}
+
+@keyframes spin {
+	100% {
+		--angle: 360deg;
+	}
+}
+
+@media (min-width: 768px) {
+	.card-container {
+		display: grid;
+		margin: 0;
+		grid-template-columns: repeat(2, 1fr);
+		place-items: center;
+	}
+}
+
+@media (min-width: 1200px) {
+	.card-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		place-items: center;
+	}
+}
