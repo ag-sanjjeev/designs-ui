@@ -1,0 +1,221 @@
+/*
+  ______________________________________________________________________________________________
+ |                                                                                              |
+ |  Copyright 2024 ag-sanjjeev                                                                  |
+ |                                                                                              |
+ |  The source code is licensed under MIT-style License.                                        |
+ |  The usage, permission and condition are applicable to this source code as per license.      |
+ |  That can be found in LICENSE file or at https://opensource.org/licenses/MIT.                |
+ |______________________________________________________________________________________________|
+
+*/
+
+/*==============================*/
+/* Simple Hero Section main.css */
+/*==============================*/
+
+/* title container */
+.title-container {
+	overflow: hidden;
+}
+
+/* a .primary title */
+a.primary-title {
+	letter-spacing: 10px;			
+	user-select: none;
+	text-decoration: none;
+	cursor: pointer;
+	overflow: hidden;
+	/* applying text shadow */
+	text-shadow: 0 1px 0 hsl(180, 15%, 80%),
+				0 2px 0 hsl(180, 15%, 75%),
+				1px 3px 0 hsl(180, 15%, 70%),
+				1px 4px 0 hsl(180, 15%, 65%),
+				2px 5px 0 hsl(180, 15%, 60%),
+				2px 6px 0 hsl(180, 15%, 55%),
+				3px 7px 0 hsl(180, 15%, 50%),
+				3px 8px 0 hsl(180, 15%, 45%),
+
+				0 10px 10px rgba(0,0,0,0.5),
+				0 11px 10px rgba(0,0,0,0.5),
+				0 12px 15px rgba(0,0,0,0.4);
+
+	/* initial reveal text animation */
+	animation: letterSpaceSize 2s ease 1;
+}
+
+/* horizontal ruler style */
+hr.title-divider {
+    display: block;
+    margin: 0px auto 5px auto;
+	width: calc(10rem + 1.5vw);
+    height: 2px;
+	opacity: 1;
+	background: white;
+	/* applying box shadow same as h1.primary-title */
+	box-shadow: 0 1px 0 hsl(180, 15%, 80%),
+				0 2px 0 hsl(180, 15%, 75%),
+				1px 3px 0 hsl(180, 15%, 70%),
+
+				0 4px 4px rgba(0,0,0,0.5);
+
+	/* First reveal by fade in and growing divider after first animation*/
+	animation: fadeIn 3s ease 1,
+				dividerGrow 3s 1s ease 1;
+}
+
+/* p.title-quote styles */
+p.title-quote {
+	user-select: none;
+	opacity: 1;
+	letter-spacing: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: calc(0.89rem + 0.5vw) !important;
+	/* text shadow same as h1.primary-title */
+	text-shadow: 0 1px 0 hsl(180, 15%, 80%),
+				0 2px 0 hsl(180, 15%, 75%),
+				1px 3px 0 hsl(180, 15%, 70%),
+
+				0 4px 4px rgba(0,0,0,0.5);
+
+	/* First reveal by fade in and applying continuous expanding and contracting animation */
+	animation: fadeIn 3s ease 1, 
+				letterSpacing 6s 3s ease infinite;
+}
+
+/* form.searhc-form styles */
+form.search-form {
+	display: flex;
+	justify-content: center;		
+}
+
+/* input.form-search-box styles */
+input.form-search-box {
+	width: 0px;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: white;
+	border-bottom: 1px solid white;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/* search box styles once focused within the search form */
+form.search-form:focus-within input.form-search-box {
+	width: calc(13rem + 1.5vw);
+}
+
+/* search box placeholder style */
+input.form-search-box::placeholder {
+	color: white;
+}
+
+/* search box placeholder style when focused */
+input.form-search-box:focus::placeholder {
+	color: transparent;
+}		
+
+/* search button styles */
+button.search-btn {
+	position: relative;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: white;
+	user-select: none;
+	cursor: zoom-in !important;
+	/* applying text shadow same as h1.primary-title */
+	text-shadow: 0 1px 0 hsl(180, 15%, 80%),
+				0 2px 0 hsl(180, 15%, 75%),
+				1px 3px 0 hsl(180, 15%, 70%),
+
+				0 2px 4px rgba(0,0,0,0.5);
+
+	/* First reveal animation by fade in and continuous icon moving animation */
+	animation: fadeIn 3s ease 1,
+				searchAround 6s 3s ease infinite;
+}
+
+/* search button styles once focused within the search form */
+form.search-form:focus-within button.search-btn {
+	position: unset;
+	animation: paused;
+	cursor: pointer !important;
+}
+
+/* animation keyframe letterSpaceSize */
+@keyframes letterSpaceSize {
+	0% {
+		letter-spacing: 100px;
+		font-size: calc(5rem + 3vw);
+	}
+	
+	100% {
+		letter-spacing: 10px;
+		font-size: calc(1.2rem + 1.5vw);
+	}
+}
+
+/* animation keyframe dividerGrow */
+@keyframes dividerGrow {
+	0%, 50% {
+		width: 0rem;
+	}
+	100% {
+		width: calc(10rem + 1.5vw);
+	}
+}
+
+/* animation keyframe fadeIn */
+@keyframes fadeIn {
+	0%, 75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* animation keyframe letterSpacing */
+@keyframes letterSpacing {
+	0%, 100% {
+		letter-spacing: 2px;
+	}
+	50% {
+		letter-spacing: 10px;
+	}
+}
+
+/* animation keyframe searchAround */
+@keyframes searchAround {
+	0% {
+		top: 0;
+		left: 10px;				
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+	25% {
+		top: 10px;
+		left: 10px;				
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+	50% {
+		top: 10px;
+		left: 0;
+		transform: rotate3d(0, 0, 1, 90deg);
+	}
+	75% {
+		top: 0;
+		left: 0;
+		transform: rotate3d(0, 0, 1, 90deg);
+	}
+	100% {
+		top: 0;
+		left: 10px;
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+}
+
+
