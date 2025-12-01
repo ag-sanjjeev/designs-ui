@@ -1,0 +1,116 @@
+@import '_reset';
+@import '_variables';
+
+body {
+  // background-image: var(--bs-gradient);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $lightblue), color-stop(100%, $darkblue));
+  background-image: -moz-linear-gradient(bottom, $lightblue 0%, $darkblue 100%);
+  width: auto;
+  height: auto;
+
+  font-family: $font;
+}
+
+.container {
+  background-color: #fff;
+  width: 400px;
+  height: auto;
+  max-height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  .form-title {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .form-group {    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;    
+
+    label {
+      font-family: $font;
+      font-size: 20px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+
+    input {
+      height: 40px;
+      border: 1px solid #c3c3c3;
+      padding: 2px 5px;
+      font-family: $font;
+      font-size: 18px;
+      color: #363636;
+      transition: all 0.3s ease-in-out;
+      cursor: text;
+
+      &:focus, &:active {
+        outline: none;
+        box-shadow: 1px 1px 3px #000;
+      }
+
+    }
+
+    button.login-button {
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      font-family: $font;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $lightblue), color-stop(100%, $darkblue));
+      padding: 10px 5px;
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+
+    &.forgot-password {
+      margin-top: 7px;
+
+      a.forgot-password-link {
+        font-size: 15px;
+        text-decoration: none;
+        color: $lightblue;
+        cursor: pointer;
+      }
+    }
+
+    &.not-member {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+      p {
+        margin: 10px 5px;
+      }
+
+      a.not-member-link {
+        margin: 10px 5px;
+        font-size: 15px;
+        text-decoration: none;
+        color: $lightblue;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}
