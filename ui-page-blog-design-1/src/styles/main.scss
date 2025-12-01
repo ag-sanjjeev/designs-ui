@@ -1,0 +1,174 @@
+/***************************************************
+ *                                                 *
+ *  Copyright 2022 ag-sanjjeev                     *
+ *                                                 *
+ *  The source code is licensed under MIT-style    *
+ *  License. The usage, permission and condition   *
+ *  are applicable to this source code as per      *
+ *  license. That can be found in LICENSE file or  *
+ *  at https://opensource.org/licenses/MIT.        *
+ *                                                 *
+ **************************************************/
+
+@import 'reset';
+@import 'variables';
+
+* {
+    transition: color 1s linear, background-color 1s linear, border-color 1s linear;
+}
+
+body {
+    padding: 0%;
+    margin: 0%;    
+}
+
+:is(.header) > * {
+    transition: all 0.5s ease;
+}
+
+ul.theme-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-flex;    
+
+    li.theme {
+        width: 25px;
+        height: 25px;
+        margin: 5px 7px;
+        border-radius: 20px;
+        cursor: pointer;
+        background-color: $white;
+        border: 2px solid $white; 
+    }
+
+    li.theme[data-theme="theme-default"] {
+        background-color: $pinkred;
+    }
+    li.theme[data-theme="theme-dark"] {
+        background-color: $black;
+    }
+    li.theme[data-theme="theme-yellow"] {
+        background-color: $yellow;
+    }
+    li.theme[data-theme="theme-blue"] {
+        background-color: $blue;
+    }
+    li.theme[data-theme="theme-green"] {
+        background-color: $green;
+    }
+}
+
+.post-masonary-header {    
+    hr {
+        margin: auto auto auto 20px;
+        width: -webkit-fill-available;
+        max-width: 100%;
+    }
+}
+
+.post-masonary {
+    columns: 3;
+    column-gap: 20px;    
+
+    div.card {
+        margin: auto auto 20px auto;
+        break-inside: avoid;
+    }
+}
+
+:is(.card, .card-body, .accordion-item, .accordion-button) {
+    border-radius: 1rem !important;
+}
+
+.card-body {
+    font-family: inherit;
+}
+
+// Post Container
+
+.post-share {    
+    text-align: left;
+    background: transparent;
+    outline: none;
+    border: 2px solid $bluegreen;
+    border-radius: 1rem !important;
+    overflow: hidden;
+    max-width: max-content;
+    width: 30px;
+    height: 30px;   
+    transition: all 1s cubic-bezier(0.77, 0, 0.45, 0.94) !important;     
+    &:hover {
+        width: 100%;
+        .btn-text {
+            width: 100%;
+        }
+    }
+
+    .btn-text {
+        width: 0%;
+        overflow: hidden;
+        white-space: nowrap;  
+    }
+
+}
+
+.card-body.post-body {
+    text-align: justify;
+    line-height: 30px;
+    // letter-spacing: 0.09rem;
+    word-spacing: 10px;
+    // font-size: calc(0.75em + 1vmin);  
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.8em + (3.6 - 1.6) * ((100vw - 300px) / (1600 - 300)));
+    
+    &::first-letter {
+        font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1600 - 300)));
+    }
+}
+
+@media (max-width:575.98px) { 
+    .post-masonary {
+        columns: 2;        
+    }
+}
+
+@media (max-width:767.98px) { 
+   
+}
+
+@media (max-width:991.98px) { }
+
+@media (max-width:1199.98px) { }
+
+@media (max-width:1399.98px) { }
+
+@media (min-width:576px) { 
+    .post-masonary {
+        columns: 2;        
+    }
+}
+
+@media (min-width:768px) { 
+    .post-masonary {
+        columns: 3;        
+    }
+}
+
+@media (min-width:992px) {
+    .post-masonary {
+        columns: 3;        
+    }
+}
+
+@media (min-width:1200px) { 
+    .post-masonary {
+        columns: 5;        
+    }
+}
+
+@media (min-width:1400px) { 
+    .post-masonary {
+        columns: 5;        
+    }
+}

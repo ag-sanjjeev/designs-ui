@@ -1,0 +1,137 @@
+/***************************************************
+ *                                                 *
+ *  Copyright 2022 ag-sanjjeev                     *
+ *                                                 *
+ *  The source code is licensed under MIT-style    *
+ *  License. The usage, permission and condition   *
+ *  are applicable to this source code as per      *
+ *  license. That can be found in LICENSE file or  *
+ *  at https://opensource.org/licenses/MIT.        *
+ *                                                 *
+ **************************************************/
+
+@import 'variables';
+
+$colorVarient1 : $blue;
+$colorVarient2 : $white;
+$colorVarient3 : $black;
+$colorVarient4 : $lightgray;
+
+body {
+    background-color: $colorVarient1;
+    color: $colorVarient1;
+}
+
+.header {
+    
+    .fa-home {
+        color: $colorVarient2;
+    } 
+    
+    h1 {
+        color: $colorVarient2;
+    }
+
+}
+
+.theme-header {
+    color: $colorVarient2;
+}
+
+.search-box-container {
+    
+    #search-box {
+        background-color: $colorVarient2;
+        color: $colorVarient3;
+    }
+
+    .input-group-text {
+        background-color: $colorVarient4;
+    }
+
+    .fa-search {
+        color: $colorVarient1;
+    }
+
+}
+
+.post-masonary {
+    background-color: $colorVarient1;
+    color: $colorVarient3;
+
+}
+
+.post-masonary-header {
+    h3 {
+        color: $colorVarient2;
+    }
+}
+
+footer {
+    color: $colorVarient2;
+    i.fa-at {
+        color: $colorVarient2;
+    }
+
+    a.footer-link {
+        color: $colorVarient2;
+    }
+}
+
+.accordion {
+    .accordion-item {
+        background-color: $colorVarient2;
+    }
+    .accordion-button.collapsed {
+        background-color: $colorVarient2;
+        color: $colorVarient3;
+    }
+}
+
+.card {
+    .card-header {
+        color: $colorVarient3;
+    }
+    .card-body {
+        background-color: $colorVarient2;
+        color: $colorVarient3;
+    }
+
+
+}
+
+.post-container {
+    .post-heading {
+        color: $colorVarient1;
+    }
+    small {
+        color: $colorVarient1;
+    }
+    .post-body {
+        background-color: $colorVarient2;
+        color: $colorVarient3;
+    }
+    .post-categories p {
+        color: $colorVarient1;
+    }
+}
+
+.fa-share {
+    color: $colorVarient1;
+}
+
+.post-share {
+    border-color: $colorVarient1;
+    .btn-text {
+        color: $colorVarient1;
+    }
+}
+
+hr {
+    background-color: $colorVarient2;
+}
+
+.badge.rounded-pill {
+    background-color: $colorVarient1;
+    color: $colorVarient2;
+}
