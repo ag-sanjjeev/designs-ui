@@ -1,0 +1,129 @@
+/***************************************************
+ *                                                 *
+ *  Copyright 2022 ag-sanjjeev                     *
+ *                                                 *
+ *  The source code is licensed under MIT-style    *
+ *  License. The usage, permission and condition   *
+ *  are applicable to this source code as per      *
+ *  license. That can be found in LICENSE file or  *
+ *  at https://opensource.org/licenses/MIT.        *
+ *                                                 *
+ **************************************************/
+/***************************************************
+ *                                                 *
+ *  Copyright 2022 ag-sanjjeev                     *
+ *                                                 *
+ *  The source code is licensed under MIT-style    *
+ *  License. The usage, permission and condition   *
+ *  are applicable to this source code as per      *
+ *  license. That can be found in LICENSE file or  *
+ *  at https://opensource.org/licenses/MIT.        *
+ *                                                 *
+ **************************************************/
+body {
+  background-color: #2255ff;
+  color: #2255ff;
+}
+
+.header .fa-home {
+  color: white;
+}
+
+.header h1 {
+  color: white;
+}
+
+.theme-header {
+  color: white;
+}
+
+.search-box-container #search-box {
+  background-color: white;
+  color: #1b1b1b;
+}
+
+.search-box-container .input-group-text {
+  background-color: #cfd8dc;
+}
+
+.search-box-container .fa-search {
+  color: #2255ff;
+}
+
+.post-masonary {
+  background-color: #2255ff;
+  color: #1b1b1b;
+}
+
+.post-masonary-header h3 {
+  color: white;
+}
+
+footer {
+  color: white;
+}
+
+footer i.fa-at {
+  color: white;
+}
+
+footer a.footer-link {
+  color: white;
+}
+
+.accordion .accordion-item {
+  background-color: white;
+}
+
+.accordion .accordion-button.collapsed {
+  background-color: white;
+  color: #1b1b1b;
+}
+
+.card .card-header {
+  color: #1b1b1b;
+}
+
+.card .card-body {
+  background-color: white;
+  color: #1b1b1b;
+}
+
+.post-container .post-heading {
+  color: #2255ff;
+}
+
+.post-container small {
+  color: #2255ff;
+}
+
+.post-container .post-body {
+  background-color: white;
+  color: #1b1b1b;
+}
+
+.post-container .post-categories p {
+  color: #2255ff;
+}
+
+.fa-share {
+  color: #2255ff;
+}
+
+.post-share {
+  border-color: #2255ff;
+}
+
+.post-share .btn-text {
+  color: #2255ff;
+}
+
+hr {
+  background-color: white;
+}
+
+.badge.rounded-pill {
+  background-color: #2255ff;
+  color: white;
+}
+/*# sourceMappingURL=theme-blue.css.map */
